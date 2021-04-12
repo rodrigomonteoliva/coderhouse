@@ -1,0 +1,276 @@
+:root {
+    --primario: #C69214;
+    --secundario: #AD841F;
+    --blanco: #ffffff;
+    --texto: #272727;
+    --gris: #757575;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    /**background-color: var(--primario); **/
+    color: var(--texto);
+    
+    /** Gradiente **/
+
+    background-image: linear-gradient(to top, var(--secundario) 0%, var(--primario) 100% );
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2rem;
+    text-align: center;
+}
+ul {
+    list-style: none
+}
+a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 4px;
+}
+ol {
+    display: block;
+    padding: 0rem 20rem 5rem 20rem;
+}
+img {
+    border-radius: 0.5rem;
+}
+/** Flex **/
+
+.flex {
+    display: flex;
+}
+.navegacion-principal {
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+.logo {
+    width: 15rem;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.nav-logo {
+    animation-name: grande;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+@keyframes grande{
+    from{
+        transform: scale(1.0);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.menu a {
+    text-decoration: none;
+    display: inline-flex;
+    color: var(--blanco);
+    font-size: 3rem;
+    padding: 5rem;
+   
+}
+
+.menu a:hover {
+    color: var(--texto);
+}
+
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.zapatilla__novedad {
+    width: 40rem;
+    height: auto;
+}
+
+.novedad {
+    display: flex;
+
+}
+.descripcion__novedad {
+    width: 25rem; 
+    margin: 4rem;
+    bottom: 13rem; 
+}
+
+.nuestra-historia {
+    display: block;
+    padding: 0rem 20rem 5rem 20rem;
+}
+/** Transformaciones **/
+
+.producto__imagen:hover {
+    transform: scale(1.1);
+}
+.producto__imagen {
+    transition: all 1s;
+}
+  
+.producto__imagen {
+    width: 30rem;
+    height: auto;
+}
+.producto {
+    display: inline-block;
+    margin: 5.5rem;
+}
+.producto__nombre, 
+.producto__precio {
+    text-align: center;
+}
+.redes-sociales {
+    margin-top: 8rem;
+}
+   
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+.ofertas-trabajo li {
+    position: relative;
+    padding: 2rem 7rem;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: 70rem;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--texto);
+}
+.contenedor-campos {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: 8rem auto 20rem;
+    column-gap: 4rem;
+}
+.campo:nth-child(3),
+.campo:nth-child(4){
+grid-column: 1 / 3;
+
+}
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+.campo textarea{
+    height: 15rem;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+}
+
+.boton-formulario {
+justify-content: center;
+}  
+
+.enviar{
+    text-decoration: none;
+    margin-top: 5rem;
+    padding: 10px;
+    width: 100%;
+    font-weight: 150;
+    font-size: 16px;
+    color: var(--gris);
+    background-color: var(--blanco);
+    border-radius: 6px;
+    border: 1px solid var(--texto);
+}
+
+  /** Último HTML comprar producto **/
+
+.enviar:hover {
+    cursor: pointer;
+}
+
+.camiseta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+.camiseta__imagen {
+    width: 30rem;
+    height: auto;
+    margin-left: 20rem;
+}
+
+.comprar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-right: 10rem;
+}
+.comprar__campo {
+    border: 1rem solid var(--gris);
+    background-color: transparent;
+    color: var(--texto);
+    font-size: 1.6rem;
+    padding: 1rem;
+    appearance: none;
+}
+.comprar__submit {
+    background-color: var(--gris);
+    border: none;
+    font-size: 1.6rem;
+    padding: 2rem;
+    grid-column: 1 / 3;
+}
+.comprar__submit:hover {
+    cursor: pointer;
+    background-color: var(--gris);
+}
+
+footer {
+    text-align: center;
+}
+
+
+
